@@ -8,6 +8,7 @@ import theme from "./Theme/theme";
 import { ThemeProvider as MuiThemeProvider } from "@material-ui/core/styles";
 import { CssBaseline } from "@material-ui/core";
 import { Alertas } from "./components/ui/Alertas";
+import { Principalscreen } from "./components/forms/Principalscreen";
 
 export const ArwebApp = () => {
     return (
@@ -17,6 +18,7 @@ export const ArwebApp = () => {
              <Alertas/>
             {/* <PruebaCarrousel/> */}
             <AppRouter /> 
+            <Principalscreen/>
              {/* <Dashboard/>  */}
              </MuiThemeProvider>
       

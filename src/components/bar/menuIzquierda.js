@@ -1,4 +1,4 @@
-import React,{useState} from "react";
+import React, { useState } from "react";
 import {
   List,
   ListItem,
@@ -11,9 +11,8 @@ import SettingsApplicationsIcon from "@material-ui/icons/SettingsApplications";
 import ExpandLess from "@material-ui/icons/ExpandLess";
 import ExpandMore from "@material-ui/icons/ExpandMore";
 import LocationCityIcon from "@material-ui/icons/LocationCity";
-import DomainIcon from "@material-ui/icons/Domain";
-import PeopleIcon from "@material-ui/icons/People";
-import CreditCardIcon from '@material-ui/icons/CreditCard';
+import AssessmentIcon from "@material-ui/icons/Assessment";
+import AccessibleForwardIcon from "@material-ui/icons/AccessibleForward";
 import { Link } from "react-router-dom";
 import { makeStyles } from "@material-ui/core/styles";
 const useStyles = makeStyles((theme) => ({
@@ -26,7 +25,7 @@ const useStyles = makeStyles((theme) => ({
     paddingLeft: theme.spacing(4),
   },
 }));
-export const MenuIzquierda = ({ cerrarMenuIzquierda }) => {
+export const MenuIzquierda = ({ handleclose }) => {
   const [open, setOpen] = useState(false);
   const classes = useStyles();
   const handleClick = () => {
@@ -40,34 +39,29 @@ export const MenuIzquierda = ({ cerrarMenuIzquierda }) => {
         aria-labelledby="nested-list-subheader"
         subheader={
           <ListSubheader component="div" id="nested-list-subheader">
-            Beneficiarios
+            Menu
           </ListSubheader>
         }
         className={classes.root}
       >
+        <ListItem component={Link} onClick={handleclose} button to="/">
+          <ListItemIcon>
+            <AccessibleForwardIcon />
+          </ListItemIcon>
+          <ListItemText primary="Accesibilidad" />
+        </ListItem>
         <ListItem
+          onClick={handleclose}
           component={Link}
-          onClick={cerrarMenuIzquierda}
           button
-          to="/Afiliaciones"
+          to="/reportes"
         >
           <ListItemIcon>
-            <PeopleIcon />
+            <AssessmentIcon />
           </ListItemIcon>
-          <ListItemText primary="Afiliaciones" />
+          <ListItemText primary="Reportes" />
         </ListItem>
-        <ListItem component={Link} button to="/empresas">
-          <ListItemIcon>
-            <DomainIcon />
-          </ListItemIcon>
-          <ListItemText primary="Empresas" />
-        </ListItem>
-        <ListItem component={Link} button to="/credenciales">
-          <ListItemIcon>
-            <CreditCardIcon />
-          </ListItemIcon>
-          <ListItemText primary="Credenciales" />
-        </ListItem>
+
         <ListItem button onClick={handleClick}>
           <ListItemIcon>
             <SettingsApplicationsIcon />
@@ -80,13 +74,14 @@ export const MenuIzquierda = ({ cerrarMenuIzquierda }) => {
             <ListItem
               component={Link}
               button
-              to="/seccionales"
+              to="/"
               className={classes.nested}
+              onClick={handleclose}
             >
               <ListItemIcon>
                 <LocationCityIcon />
               </ListItemIcon>
-              <ListItemText primary="Seccionales" />
+              <ListItemText primary="Normas WCAG" />
             </ListItem>
           </List>
         </Collapse>

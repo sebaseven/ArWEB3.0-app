@@ -62,9 +62,6 @@ const BarSesionDefault = (props) => {
   const cerrarMenuIzquierda = () => {
     setAbrirMenuIzquierda(false);
   };
-  // const salirSesionApp = () => {
-  //   dispatch(startLogout());
-  // };
 
   const abrirMenuDerechaAction = () => {
     setAbrirMenuDerecha(true);
