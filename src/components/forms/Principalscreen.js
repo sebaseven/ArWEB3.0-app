@@ -2,7 +2,7 @@ import React from "react";
 
 //import CssBaseline from '@material-ui/core/CssBaseline';
 import Grid from "@material-ui/core/Grid";
-import { Typography, Paper } from "@material-ui/core";
+import { Typography, Paper, Button } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import Container from "@material-ui/core/Container";
 import { CopyRight } from "../ui/CopyRight";
@@ -10,13 +10,21 @@ import TabPanel from "./TabPanel";
 import { useHistory } from "react-router-dom";
 import clsx from "clsx";
 import SwitchesGroup from "../ui/SwitchesGroup";
+import RadioNivel from "../ui/RadioNivel";
+import RadioVersion from "../ui/RadioVersion";
 const useStyles = makeStyles((theme) => {
   return {
     paper: {
       padding: theme.spacing(2),
       display: "flex",
       overflow: "auto",
-      flexDirection: "column",
+      flexDirection: "row",
+      justifyContent:"center"
+    },
+    title: {
+      display: "flex",
+      flexDirection: "row",
+      justifyContent:"center"
     },
     subtitulo:{
         marginTop: 15,
@@ -24,7 +32,7 @@ const useStyles = makeStyles((theme) => {
     },
     content: {
       flexGrow: 1,
-      marginTop: 25,
+      marginTop: 15,
     },
     fixedHeight: {
       height: 240,
@@ -58,33 +66,38 @@ export const Principalscreen = () => {
   return (
     <>
       <main className={classes.content}>
-        <Container maxWidth="lg">
+        <Container >
           <Grid
             container
             direction="row"
-            justify="center"
+            justify="space-between"
             alignItems="center"
-            spacing={3}
+            spacing={1}
           >
             <Grid item xs={12}>
               <Typography
                 style={{ color: "#FAFAFA", textAlign: "center" }}
-                variant="h3"
+                variant="h4"
               >
                 Evaluacion De Accesibilidad WEB
               </Typography>
             </Grid>
             <Grid item xs={12}>
+            <Grid item xs={12}>
+              <Paper className={classes.title}>
+              <Typography className={classes.subtitulo} variant="h6" component="h2">Configuracion Analisis</Typography>
+              </Paper>
+            </Grid>
               <Paper className={fixedHeightPaper}>
-                <Grid
-                  container
-                  direction="column"
-                  justify="center"
-                  alignItems="center"
-                  spacing={3}
-                ></Grid>
-                <Typography className={classes.subtitulo} variant="h6">Configuracion Analisis</Typography>
+                <Grid item xs={4}>
                 <SwitchesGroup />
+                </Grid>
+                <Grid item xs={4}>
+                <RadioNivel/>
+                </Grid>
+                <Grid item xs={4}>
+                <RadioVersion/>
+                </Grid>           
               </Paper>
             </Grid>
             <Grid item xs={12}>
@@ -92,9 +105,8 @@ export const Principalscreen = () => {
                 <TabPanel></TabPanel>
               </Paper>
             </Grid>
-
-            <Grid item xs={12}>
-              <Paper className={classes.paper}></Paper>
+            <Grid item xs={2}>
+           <Button variant="contained" color="secondary">Verificar</Button>
             </Grid>
           </Grid>
         </Container>

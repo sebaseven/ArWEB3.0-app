@@ -1,5 +1,5 @@
 import React from 'react';
-import FormLabel from '@material-ui/core/FormLabel';
+import Typography from '@material-ui/core/Typography';
 import FormControl from '@material-ui/core/FormControl';
 import FormGroup from '@material-ui/core/FormGroup';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
@@ -19,7 +19,7 @@ export default function SwitchesGroup() {
 
   return (
     <FormControl component="fieldset">
-      <FormLabel component="legend">Principios a Verificar</FormLabel>
+          <Typography variant="h6">Principios a Verificar</Typography>
       <FormGroup>
         <FormControlLabel
           control={<Switch checked={state.perceptibilidad} onChange={handleChange} name="perceptibilidad" />}
