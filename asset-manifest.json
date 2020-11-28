@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/ArWEB3.0-app/static/css/main.6dea0f05.chunk.css",
+    "main.js": "/ArWEB3.0-app/static/js/main.7544aa96.chunk.js",
+    "main.js.map": "/ArWEB3.0-app/static/js/main.7544aa96.chunk.js.map",
+    "runtime-main.js": "/ArWEB3.0-app/static/js/runtime-main.da97d31a.js",
+    "runtime-main.js.map": "/ArWEB3.0-app/static/js/runtime-main.da97d31a.js.map",
+    "static/js/2.b0c0ec9d.chunk.js": "/ArWEB3.0-app/static/js/2.b0c0ec9d.chunk.js",
+    "static/js/2.b0c0ec9d.chunk.js.map": "/ArWEB3.0-app/static/js/2.b0c0ec9d.chunk.js.map",
+    "index.html": "/ArWEB3.0-app/index.html",
+    "static/css/main.6dea0f05.chunk.css.map": "/ArWEB3.0-app/static/css/main.6dea0f05.chunk.css.map",
+    "static/js/2.b0c0ec9d.chunk.js.LICENSE.txt": "/ArWEB3.0-app/static/js/2.b0c0ec9d.chunk.js.LICENSE.txt",
+    "static/media/back1.913e01ca.jpg": "/ArWEB3.0-app/static/media/back1.913e01ca.jpg",
+    "static/media/logo.6ce24c58.svg": "/ArWEB3.0-app/static/media/logo.6ce24c58.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.da97d31a.js",
+    "static/js/2.b0c0ec9d.chunk.js",
+    "static/css/main.6dea0f05.chunk.css",
+    "static/js/main.7544aa96.chunk.js"
+  ]
+}
