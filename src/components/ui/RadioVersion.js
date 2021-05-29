@@ -1,7 +1,7 @@
 import React from "react";
 import { withStyles } from "@material-ui/core/styles";
 import { Radio, FormControlLabel, Typography } from "@material-ui/core";
-import { green, purple, deepOrange } from "@material-ui/core/colors";
+import {  purple, deepOrange } from "@material-ui/core/colors";
 
 const OrangeRadio = withStyles({
     root: {
@@ -12,6 +12,7 @@ const OrangeRadio = withStyles({
     },
     checked: {},
   })((props) => <Radio color="default" {...props} />);
+
   const PurpleRadio = withStyles({
     root: {
       color: purple[400],
@@ -21,6 +22,7 @@ const OrangeRadio = withStyles({
     },
     checked: {},
   })((props) => <Radio color="default" {...props} />);
+  
 export default function RadioVersion() {
   const [selectedValue, setSelectedValue] = React.useState("2.0");
 

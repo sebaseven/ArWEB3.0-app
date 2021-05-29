@@ -10,6 +10,7 @@ export const finishAlerta =(tipo,mensaje,titulo)=>{
         dispatch(alertaCerrar());
       };
 }
+
 const alertaAbrir = (mensaje,tipo,titulo) => ({
     type: types.alertaOpen,
     payload: {
@@ -18,6 +19,7 @@ const alertaAbrir = (mensaje,tipo,titulo) => ({
         titulo:titulo
     },
   });
+
   const alertaCerrar = () => ({
     type: types.alertaClose,
   });
